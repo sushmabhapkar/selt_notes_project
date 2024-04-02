@@ -7,11 +7,11 @@ const NoteItem=(props)=>
     
     return(
 
-        <div className='note-item'>
-           <div className='note-item__title'>
+        <div>
+           <div >
                <h2>{props.title}</h2>
            </div>
-           <div className='note-item__Description'>
+           <div >
                <h4>{props.description}</h4>
            </div> 
           

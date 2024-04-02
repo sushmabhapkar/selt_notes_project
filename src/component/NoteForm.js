@@ -1,4 +1,5 @@
 import React,{useState} from "react";
+import './NoteForm.css';
 const NoteForm=(props)=>
 {
 const[enteredTitle,setEnteredTitle]=useState('');
@@ -32,22 +33,30 @@ const submitHandler=(event)=>
 
 
     return(
+        <div className="note-form-container">
         <form onSubmit={submitHandler}>
+          
           <label>Note Title:</label>
           <input 
           type='text'
           value={enteredTitle}
           onChange={titleChangeHandler}
           />
+          
           <br></br>
+          
           <label>Note Description:</label>
           <textarea
           value={enteredDescription}
           onChange={descriptionChangeHandler}
           />
+
           <br></br>
+          
           <button type='submit'>Add To Book</button>
+      
        </form>
+       </div>
     )
 
 }

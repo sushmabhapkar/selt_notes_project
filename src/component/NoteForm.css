@@ -1,0 +1,43 @@
+.note-form-container {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 30px;
+    border: 2px solid #2c2b2b;
+    border-radius: 12px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    background-color: rgb(146, 105, 139);
+    
+  }
+  
+  .note-form-container label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .note-form-container input[type="text"],
+  .note-form-container textarea {
+    width: 100%;
+    height: 50%;
+    padding: 10px;
+    border-radius: 2px;
+    border: 1px solid #181717;
+    margin-bottom: 10px;
+  }
+  
+  .note-form-container textarea {
+    height: 100px;
+    
+  }
+  
+  .note-form-container button {
+    background-color: #5c0c51;
+    color: #f8f4f4;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 3px solid #181717;
+    cursor: pointer;
+  }
+  
+  
