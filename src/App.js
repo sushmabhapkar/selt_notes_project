@@ -1,23 +1,45 @@
-import logo from './logo.svg';
-import './App.css';
+import React,{useState} from 'react';
 
-function App() {
+import Notes from './component/Notes';
+import NewNote from './component/NewNote';
+
+const Dummy_notes=[
+  {
+    title:'Module 1',
+    description:'Basic react Course....'
+   },
+  
+   {
+    title:'Module 2',
+    description:'Advanced react Course....'
+   },
+   
+   {
+    title:'Module 3',
+    description:'Frontend full Course....'
+   },
+   {
+    title:'Module 4',
+    description:'Backend full Course....'
+   }
+];
+
+
+
+function App(props) {
+  const [notes,setNotes]=useState(Dummy_notes);
+
+  const addNoteHandler = (note) => {
+    setNotes((prevNotes) => {
+        return [note, ...prevNotes];
+    });
+};
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>NoteBook App</h1>
+       <NewNote onAddNote={addNoteHandler}/>
+      <Notes items={notes}/>
     </div>
   );
 }
